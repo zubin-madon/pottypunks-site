@@ -22,6 +22,7 @@ function Navigation() {
             layout="intrinsic"
             width={64}
             height={64}
+            alt="Twitter"
           />
         </div>
       </a>
@@ -34,6 +35,7 @@ function Navigation() {
             layout="intrinsic"
             width={64}
             height={64}
+            alt="Discord"
           />
         </div>
       </a>
@@ -46,6 +48,7 @@ function Navigation() {
             layout="intrinsic"
             width={218}
             height={362}
+            alt="Mint"
           />
            <span>Home | Mint</span>
         </div>
@@ -59,6 +62,7 @@ function Navigation() {
             layout="intrinsic"
             width={120}
             height={100}
+            alt="Roadmap"
           />
           <span>Roadmap</span>
         </div>
@@ -70,6 +74,7 @@ function Navigation() {
             layout="intrinsic"
             width={250}
             height={250}
+            alt="Staking"
           />
            <span className="text-center">Staking</span>
         </div>
@@ -85,6 +90,7 @@ function Navigation() {
           layout="intrinsic"
           width={260}
           height={169}
+          alt="DAO"
         />
          <span>Potty DAO</span>
       </div>
