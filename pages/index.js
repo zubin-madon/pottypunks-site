@@ -9,7 +9,7 @@ export default function Home() {
     <div className="text-center">
       <main className="min-h-100 p-5 m-5 justify-center">
         <h1 className="text-4xl">PottyPunks</h1>
-        <p className="my-5 text-slate-400">5555 Punks on the Pot</p>
+        <p id="mint" className="my-5 text-slate-400">5555 Punks on the Pot</p>
         <div className="container py-96">
           <span className="text-3xl">0/5555</span>
           <div className="m-5 p-5">

@@ -1,18 +1,25 @@
 import '../styles/globals.css'
 import Navigation from '../components/navigation';
+import { Web3ReactProvider } from '@web3-react/core';
+import {Web3Provider} from "@ethersproject/providers";
+
+const getLibrary = (provider) => {
+  return new Web3Provider(provider);
+}
 
 function MyApp({ Component, pageProps }) {
   return (
+    <Web3ReactProvider getLibrary={getLibrary}>
     <div>
-      <div className="container grid grid-cols-2 h-screen">
-        <div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 h-full w-full">
+        <div className='col-span-1'>
           <header className="sticky top-0 flex flex-wrap">
             <Navigation />
           </header>
           
         </div>
 
-        <div className="bg-slate-900 px-24 text-center p-10">
+        <div className="bg-black text-center p-10 border-8 border-double border-gray-400">
           <Component {...pageProps} />
         </div>
         
@@ -25,6 +32,7 @@ function MyApp({ Component, pageProps }) {
     </footer>
       </div>
     </div>
+    </Web3ReactProvider>
   );
 }
 

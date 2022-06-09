@@ -1,102 +1,179 @@
 import Link from "next/link";
 import Image from "next/image";
+import { useState, useEffect} from 'react';
+import { useWeb3React } from "@web3-react/core";
+import {InjectedConnector} from "@web3-react/injected-connector";
+import { ethers } from "ethers";
+
+
+const injected = new InjectedConnector();
 
 function Navigation() {
+  const [connected, setConnected] = useState(false)
+  const [hasMetamask, setHasMetamask] = useState(false);
+  const {
+    active,
+    activate,
+    chainId,
+    account,
+    library: provider,
+  } = useWeb3React();
+
+  useEffect(() => {
+    if (typeof window.ethereum !== "undefined") {
+      setHasMetamask(true);
+    }
+  });
+
+  async function execute() {
+    if (active) {
+      const signer = provider.getSigner();
+      const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+      const contract = new ethers.Contract(contractAddress, abi, signer);
+      try {
+        await contract.store(42);
+      } catch (error) {
+        console.log(error);
+      }
+    } else {
+      console.log("Please install MetaMask");
+    }
+  }
+
+  async function connect() {
+    
+    if (typeof window.ethereum !== "undefined") {
+      console.log("connect")
+      try {
+        await activate(injected);
+        setHasMetamask(true);
+        
+      } catch (e) {
+        alert(e);
+      }
+    }
+  }
+
   return (
-    <div className="m-5 py-24 grid md:grid-cols-3 gap-1 justify-evenly text-white">
-      <div>
-        {/* empty */}
-      </div>
-      <div>
-       {/* empty */}
-      </div>
-      <div>
-        {/* empty */}
-      </div>
-     
-      <div className="p-5 m-5">
-      <a href="https://twitter.com/pottypunks" target="_blank" rel="noopener noreferrer">
-        <div className="p-5 hover:scale-125 transition duration-300 hover:sepia">
+    <div className="text-center relative w-full h-full block">
+      <span className="opacity-100">
+        <Image
+          src="/assets/bathroom-wall.png"
+          layout="responsive"
+          width={100}
+          height={130}
+          alt="Potty Punks"
+        />
+      </span>
+
+      {/* first child image */}
+      <Link href="/#mint">
+        <div className="absolute bottom-0 left-24 z-10 hover:scale-125 transition duration-300 hover:sepia">
+          <Image
+            src="/assets/home-icon.png"
+            layout="intrinsic"
+            width={250}
+            height={430}
+            alt="nav-background"
+          />
+          <div>
+            <span className="text-xl">Home | Mint</span>
+          </div>
+        </div>
+      </Link>
+
+      {/* second child image */}
+      <Link href="/dao/#dao">
+        <div className="absolute bottom-1/4 right-2 text-center hover:scale-125 transition duration-300 hover:sepia">
+          <div>
+            <span className="text-xl">DAO</span>
+          </div>
+          <Image
+            src="/assets/dao-icon.png"
+            layout="intrinsic"
+            width={300}
+            height={200}
+            alt="dao"
+          />
+        </div>
+      </Link>
+
+      {/* third child image */}
+      <Link href="/roadmap/#roadmap">
+        <div className="absolute bottom-1/3 -left-0 text-center z-0 hover:scale-125 transition duration-300 hover:sepia">
+          <div>
+            <span className="text-xl">Roadmap</span>
+          </div>
+          <Image
+            src="/assets/roadmap-icon.png"
+            layout="intrinsic"
+            width={100}
+            height={75}
+            alt="roadmap"
+          />
+        </div>
+      </Link>
+
+      {/* fourth child image */}
+      <Link href="/staking/#staking">
+        <div className="text-center absolute bottom-0 right-2 z-10 hover:scale-125 transition duration-300 hover:sepia">
+          <Image
+            src="/assets/staking-icon.png"
+            layout="intrinsic"
+            width={260}
+            height={260}
+            alt="staking"
+          />
+          <div>
+            <span className="text-xl">Staking</span>
+          </div>
+        </div>
+      </Link>
+
+      {/* fifth child image */}
+      <a
+        href="https://twitter.com/pottypunks"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div className="text-center absolute top-1/3 left-1/4 z-10 hover:scale-125 transition duration-300 hover:sepia">
           <Image
             src="/assets/twitter-icon.png"
             layout="intrinsic"
-            width={64}
-            height={64}
+            width={80}
+            height={80}
             alt="Twitter"
           />
         </div>
       </a>
-        
 
-      <a href="https://discord.gg/Chespdgsnj" target="_blank" rel="noopener noreferrer">
-        <div className="p-5 hover:scale-125 transition duration-300 hover:sepia">
+      {/* fifth child image */}
+      <a
+        href="https://discord.gg/Chespdgsnj"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div className="text-center absolute top-1/3 right-1/4 z-10 hover:scale-125 transition duration-300 hover:sepia">
           <Image
             src="/assets/discord-icon.png"
             layout="intrinsic"
-            width={64}
-            height={64}
+            width={80}
+            height={80}
             alt="Discord"
           />
         </div>
       </a>
-      </div>
-      <div>
-      <Link href="/">
-        <div className="p-5 hover:scale-125 transition duration-300 hover:sepia">
-          <Image
-            src="/assets/home-icon.png"
-            layout="intrinsic"
-            width={218}
-            height={362}
-            alt="Mint"
-          />
-           <span>Home | Mint</span>
-        </div>
-        </Link>
-      </div>
-      <div>
-      <Link href="/roadmap">
-        <div className="m-5 p-5 align-bottom self-baseline hover:scale-125 transition duration-300 hover:sepia">
-          <Image
-            src="/assets/roadmap-icon.png"
-            layout="intrinsic"
-            width={120}
-            height={100}
-            alt="Roadmap"
-          />
-          <span>Roadmap</span>
-        </div>
-        </Link>
-        <Link href="/staking">
-        <div className="text-center m-2 p-2 align-bottom self-baseline hover:scale-125 transition duration-300 hover:sepia">
-          <Image
-            src="/assets/staking-icon.png"
-            layout="intrinsic"
-            width={250}
-            height={250}
-            alt="Staking"
-          />
-           <span className="text-center">Staking</span>
-        </div>
-        </Link>
-      </div>
-      <div>
-         {/* empty */}
-      </div>
-      <Link href="/dao">
-      <div className="text-center hover:scale-125 transition duration-300 hover:sepia">
-      <Image
-          src="/assets/dao-icon.png"
-          layout="intrinsic"
-          width={260}
-          height={169}
-          alt="DAO"
-        />
-         <span>Potty DAO</span>
-      </div>
-      </Link>
-      <div>
-      
+
+      {/* Wallet Connect Button */}
+      <div className="absolute top-1 right-0 z-10 hover:scale-125 transition duration-300 hover:sepia">
+        <button
+          className={
+            "bg-white hover:bg-gray-100 text-black font-semibold py-2 px-4 border-4 border-black rounded shadow"
+          }
+          onClick={connect}
+        >
+          {active ? "Connected" : "Connect"}
+        </button>
       </div>
     </div>
   );
