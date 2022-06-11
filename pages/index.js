@@ -37,6 +37,7 @@ export default function Home() {
         <div>
           <Image
             src="/assets/mint-pot-anim.gif"
+            unoptimized={true}
             layout="intrinsic"
             width={197}
             height={260}
