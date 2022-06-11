@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps }) {
 <meta property="og:url" content="https://pottypunks.xyz" key="ogurl" />
 <meta property="og:image" content="/android-chrome-512x512.png" key="ogimage" />
 <meta property="og:site_name" content="PottyPunks" key="ogsitename" />
-<meta property="og:title" content="PottyPunks - Mint" key="ogtitle" />
+<meta property="og:title" content="PottyPunks NFTs" key="ogtitle" />
 <meta property="og:description" content="5555 Punks on the Pot" key="ogdesc" />
     </Head>
       <div className="grid grid-cols-1 lg:grid-cols-2 h-full w-full">
@@ -38,16 +38,15 @@ function MyApp({ Component, pageProps }) {
 
         <div className="bg-black text-center p-10 border-8 border-double border-gray-400">
           <Component {...pageProps} />
+          {/* <footer className="bottom-0 fixed w-full right-1/4">
+            <p className="text-xl text-center">
+              © {new Date().getFullYear()} PottyPunks
+            </p>
+          </footer> */}
         </div>
         
       </div>
-      <div className='grid grid-rows-1 px-60'>
-      <footer className="fixed bottom-0">
-          <p className="text-xl text-center">
-            © {new Date().getFullYear()} PottyPunks
-          </p>
-    </footer>
-      </div>
+      
     </div>
     </Web3ReactProvider>
   );

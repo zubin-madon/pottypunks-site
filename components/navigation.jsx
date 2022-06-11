@@ -68,7 +68,7 @@ function Navigation() {
 
       {/* first child image */}
       <Link href="/#mint">
-        <div className="absolute bottom-0 left-24 z-10 hover:scale-125 transition duration-300 hover:sepia">
+        <div className="absolute top-1/2 left-24 z-10 hover:scale-125 transition duration-300 hover:sepia">
           <Image
             src="/assets/home-icon.png"
             layout="intrinsic"
@@ -116,11 +116,11 @@ function Navigation() {
 
       {/* fourth child image */}
       <Link href="/staking/#staking">
-        <div className="text-center absolute bottom-0 right-2 z-10 hover:scale-125 transition duration-300 hover:sepia">
+        <div className="text-center absolute top-3/4 right-2 z-10 hover:scale-125 transition duration-300 hover:sepia">
           <Image
             src="/assets/staking-icon.png"
             layout="intrinsic"
-            width={260}
+            width={360}
             height={260}
             alt="staking"
           />

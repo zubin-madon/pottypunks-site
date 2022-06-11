@@ -10,7 +10,7 @@ function Roadmap() {
         
           <div className="mt-5 mb-5 w-full">
             <div className="flex-column">
-              <div className="border border-gray-200 p-6 rounded-lg bg-slate-900 hover:scale-125 transition duration-300 hover:bg-blue-900/[0.3]">
+              <div className="border border-gray-200 p-6 rounded-lg bg-slate-900 hover:scale-125 transition duration-300 hover:sepia">
                 <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-slate-400 mb-4">
                   <Image
                     src="/assets/poop-icon.png"
@@ -33,7 +33,7 @@ function Roadmap() {
 
           <div className="mt-5 mb-5 w-full">
             <div className="flex-column">
-              <div className="border border-gray-200 p-6 rounded-lg bg-slate-900 hover:scale-125 transition duration-300 hover:bg-blue-900/[0.3]">
+              <div className="border border-gray-200 p-6 rounded-lg bg-slate-900 hover:scale-125 transition duration-300 hover:sepia">
                 <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-slate-400 mb-4">
                   <Image
                     src="/assets/poop-icon.png"
@@ -56,7 +56,7 @@ function Roadmap() {
 
           <div className="mt-5 mb-5 w-full">
             <div className="flex-column">
-              <div className="border border-gray-200 p-6 rounded-lg bg-slate-900 hover:scale-125 transition duration-300 hover:bg-blue-900/[0.3]">
+              <div className="border border-gray-200 p-6 rounded-lg bg-slate-900 hover:scale-125 transition duration-300 hover:sepia">
                 <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-slate-400 mb-4">
                   <Image
                     src="/assets/poop-icon.png"
@@ -79,7 +79,7 @@ function Roadmap() {
 
           <div className="mt-5 mb-5 w-full">
             <div className="flex-column">
-              <div className="border border-gray-200 p-6 rounded-lg bg-slate-900 hover:scale-125 transition duration-300 hover:bg-blue-900/[0.3]">
+              <div className="border border-gray-200 p-6 rounded-lg bg-slate-900 hover:scale-125 transition duration-300 hover:sepia">
                 <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-slate-400 mb-4">
                   <Image
                     src="/assets/poop-icon.png"
@@ -100,7 +100,7 @@ function Roadmap() {
 
           <div className="mt-5 mb-5 w-full">
             <div className="flex-column">
-              <div className="border border-gray-200 p-6 rounded-lg bg-slate-900 hover:scale-125 transition duration-300 hover:bg-blue-900/[0.3]">
+              <div className="border border-gray-200 p-6 rounded-lg bg-slate-900 hover:scale-125 transition duration-300 hover:sepia">
                 <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-slate-400 mb-4">
                   <Image
                     src="/assets/poop-icon.png"
