@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }) {
     <meta name="author" content="Zubin Madon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       {/* Twitter */}
-  <meta name="twitter:card" content="summary" key="twcard" />
+  <meta name="twitter:card" content="5555 Punks on the Pot" key="twcard" />
   <meta name="twitter:creator" content='@pottypunks' key="twhandle" />
 
 {/* Open Graph */}
