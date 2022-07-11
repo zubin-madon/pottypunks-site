@@ -23,16 +23,16 @@ function MyApp({ Component, pageProps }) {
 
 {/* Open Graph */}
         <meta property="og:url" content="https://pottypunks.xyz" key="ogurl" />
-        <meta property="og:image" content="/android-chrome-512x512.png" key="ogimage" />
+        <meta property="og:image" content="https://pottypunks.xyz/android-chrome-512x512.png" key="ogimage" />
         <meta property="og:site_name" content="PottyPunks" key="ogsitename" />
         <meta property="og:title" content="PottyPunks NFTs" key="ogtitle" />
         <meta property="og:description" content="5555 Punks on the Pot" key="ogdesc" />
         <meta property="og:title" content="PottyPunks NFTs" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://pottypunks.xyz" />
-        <meta property="og:image" content="/android-chrome-512x512.png" />
+        <meta property="og:image" content="https://pottypunks.xyz/android-chrome-512x512.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content="/android-chrome-512x512.png"/>
+        <meta name="twitter:image" content="https://pottypunks.xyz/android-chrome-512x512.png"/>
         <meta name="twitter:creator" content="@PottyPunks"/>
         <meta name="twitter:site" content="https://pottypunks.xyz"/>
         <meta name="twitter:title" content="PottyPunks NFTs" />
