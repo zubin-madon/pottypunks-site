@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }) {
 <meta property="og:title" content="PottyPunks NFTs" key="ogtitle" />
 <meta property="og:description" content="5555 Punks on the Pot" key="ogdesc" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <meta property="og:title" content="Potty Pynks" />
+        <meta property="og:title" content="PottyPunks NFTs" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://pottypunks.xyz" />
         <meta
@@ -37,6 +37,10 @@ function MyApp({ Component, pageProps }) {
         />
         <meta property="og:description" content="Potty Punks" />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="/android-chrome-512x512.png"/>
+        <meta name="twitter:creator" content="@PottyPunks"/>
+        <meta name="twitter:site" content="https://pottypunks.xyz"/
+        <meta name="twitter:title" content="PottyPunks NFTs" />
     </Head>
       <div className="grid grid-cols-1 lg:grid-cols-2 h-full w-full">
         <div className='col-span-1'>
