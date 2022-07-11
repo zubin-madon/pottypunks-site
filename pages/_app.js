@@ -30,16 +30,15 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:title" content="PottyPunks NFTs" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://pottypunks.xyz" />
-        <meta
-          property="og:image"
-          content="/android-chrome-512x512.png"
-        />
-        <meta property="og:description" content="Potty Punks" />
+        <meta property="og:image" content="/android-chrome-512x512.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content="/android-chrome-512x512.png"/>
         <meta name="twitter:creator" content="@PottyPunks"/>
         <meta name="twitter:site" content="https://pottypunks.xyz"/>
         <meta name="twitter:title" content="PottyPunks NFTs" />
+        <meta content='summary_large_image' name='twitter:card'/>
+        <meta content='@PottyPunks' name='twitter:site'/>
+        <meta content='@PottyPunks' name='twitter:creator'/>
     </Head>
       <div className="grid grid-cols-1 lg:grid-cols-2 h-full w-full">
         <div className='col-span-1'>
