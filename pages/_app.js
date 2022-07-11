@@ -11,7 +11,7 @@ const getLibrary = (provider) => {
 function MyApp({ Component, pageProps }) {
   return (
     <Web3ReactProvider getLibrary={getLibrary}>
-    <div>
+    
     <Head>
     <meta charset="UTF-8" />
     <meta name="keywords" content="PottyPunks, NFT, Ethereum" />
@@ -38,7 +38,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content="/android-chrome-512x512.png"/>
         <meta name="twitter:creator" content="@PottyPunks"/>
-        <meta name="twitter:site" content="https://pottypunks.xyz"/
+        <meta name="twitter:site" content="https://pottypunks.xyz"/>
         <meta name="twitter:title" content="PottyPunks NFTs" />
     </Head>
       <div className="grid grid-cols-1 lg:grid-cols-2 h-full w-full">
@@ -60,7 +60,7 @@ function MyApp({ Component, pageProps }) {
         
       </div>
       
-    </div>
+    
     </Web3ReactProvider>
   );
 }
